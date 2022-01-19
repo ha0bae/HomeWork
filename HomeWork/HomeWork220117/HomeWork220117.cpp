@@ -17,8 +17,6 @@ int StringLength(const char* _Left)
 
 bool StringCompare(const char* _Left, const char* _Right)
 {
-    //"aaae ttt asdfasd ee"
-    // "ee"
     int i = 0;
     for (; 0 != _Left[i] && 0 != _Right[i]; )
     {
@@ -36,8 +34,7 @@ int CountFirst(const char* _Text, int _Start, const char* _FindStr)
 {
     int StartCount = StringLength(_Text);
     int EndCount = StringLength(_FindStr);
-    //"aaae ttt asdfasd ee"
-    // ee
+   
     for (int i = _Start; i < StartCount; i += 1)
     {
         if (_Text[i] == _FindStr[0])
@@ -80,7 +77,6 @@ int main()
 
     }
     {
-        //2
         int Count = CountLast("aee eea", 6, "ee");
         int a = 0;
     }
