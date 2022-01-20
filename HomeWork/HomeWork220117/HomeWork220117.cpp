@@ -1,7 +1,12 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 
-//두 개 검색만 됨.... 
+void InputNum()
+{
+    char _Text = {0,};
+    int _Start = 0;
+    char _FindStr = { 0, };
+    scanf_s("%s %d %s", &_Text, _Start, &_FindStr);
+}
 
 int StringLength(const char* _Left)
 {
@@ -72,7 +77,8 @@ int main()
     // 실패
     {
         
-        int Count = CountFirst("aaae ttt asdfasd ee", 0, "ee");
+        //int Count = CountFirst("aaae ttt asdfasd ee", 0, "ee");
+        InputNum();
         int a = 0;
 
     }
