@@ -82,18 +82,17 @@ void TextScreen::PrintScreen()
 
 void TextScreen::SetPixel(ConsoleVector _Pos, const char* _DefaultValue)
 {
-	if (_Pos.x_ < 0 || _Pos.x_ >= Size_.x_ || _Pos.y_ < 0 || _Pos.y_ >= Size_.y_)
-	{
-		assert(false);
-	}
-
 	SetPixel(_Pos.x_, _Pos.y_, _DefaultValue);
 }
 
 void TextScreen::SetPixel(int _X, int _Y, const char* _DefaultValue)
 {
 	// 기본자료형을 사용한 함수에 진짜 내용을 놓고
-
+	if (_X < 0 || _X >= Size_.x_
+		|| _Y < 0 || _Y >= Size_.y_)
+	{
+		assert(false);
+	}
 	for (int i = 0; i < 2; i++)
 	{
 		PixelData_[_Y][(_X * 2) + i] = _DefaultValue[i];
