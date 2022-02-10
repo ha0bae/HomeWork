@@ -29,6 +29,7 @@ TextScreen::~TextScreen()
 
 void TextScreen::CreateScreen(int _Width, int _Height, const char* _DefaultValue)
 {
+
 	Size_.x_ = _Width;
 	Size_.y_ = _Height;
 
@@ -89,10 +90,11 @@ void TextScreen::SetPixel(int _X, int _Y, const char* _DefaultValue)
 {
 	// 기본자료형을 사용한 함수에 진짜 내용을 놓고
 	if (_X < 0 || _X >= Size_.x_
-		|| _Y < 0 || _Y >= Size_.y_)
+		|| _Y < 0 || _Y >= Size_y_)
 	{
 		assert(false);
 	}
+	
 	for (int i = 0; i < 2; i++)
 	{
 		PixelData_[_Y][(_X * 2) + i] = _DefaultValue[i];
